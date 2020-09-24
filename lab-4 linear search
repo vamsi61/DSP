@@ -1,0 +1,25 @@
+
+pos=-1
+
+def search (list,n):
+    i=0
+
+    while i<len(list):
+        if list[i]==n:
+            globals()['pos']=i
+            return True
+        i=i+1
+
+    return False
+
+list=[23,56,78,1,45,7]
+n=56
+
+if search(list,n):
+    print("found at",pos+1)
+else:
+    print("not found")
+    
+    
+    runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled10.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+found at 2
