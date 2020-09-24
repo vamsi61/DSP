@@ -1,0 +1,28 @@
+def linearsearch(list, n):
+    """Return index of key in list. Return -1 if key not present."""
+    for i in range(len(list)):
+        if list[i] == n:
+            return i
+    return -1
+ 
+ 
+list = input('Enter the list of numbers: ')
+list = list.split()
+list = [int(x) for x in list]
+n    = int(input('The number to search for: '))
+ 
+index = linearsearch(list, n)
+if index < 0:
+    print('{} was not found.'.format(n))
+else:
+    print('{} was found at index {}.'.format(n, index))
+    
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/linear search.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+
+Enter the list of numbers: 5 7 8 2
+
+The number to search for: 7
+7 was found at index 1.    
