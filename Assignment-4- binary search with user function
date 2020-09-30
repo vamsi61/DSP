@@ -1,0 +1,32 @@
+def bsearch(lys, val):
+    first = 0
+    last = len(lys)-1
+    i = -1
+    while (first <= last):
+        mid = (first+last)//2
+        if lys[mid] == val:
+            i = mid
+            break
+        else:
+            if val<lys[mid]:
+                last = mid -1
+            else:
+                first = mid +1
+    return i
+
+k=[int(x) for x in input("Enter multiple value: ").strip().split()]
+k.sort()
+f=int(input("enter the element to be searched"))
+print(bsearch(k,f))
+
+
+
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled12.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+
+Enter multiple value: 5 6 7 8
+
+enter the element to be searched7
+2
