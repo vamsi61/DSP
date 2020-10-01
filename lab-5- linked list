@@ -1,0 +1,19 @@
+class Node():
+    def __init__(self, data):
+        self.data = data
+
+a = Node(10)
+b = Node(20)
+a.next = b
+b.next = None
+
+print(a.data)
+print(a.next.data)
+
+
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled13.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+10
+20
