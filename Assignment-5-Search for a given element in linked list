@@ -1,0 +1,48 @@
+class Node: 
+      
+    def __init__(self, data): 
+        self.data = data 
+        self.next = None 
+class LinkedList: 
+    def __init__(self): 
+        self.head = None 
+  
+    # This function insert a new node at  
+    # the beginning of the linked list 
+    def push(self, new_data): 
+      
+        # Create a new Node 
+        new_node = Node(new_data) 
+  
+        # Make next of new Node as head 
+        new_node.next = self.head 
+        self.head = new_node 
+    def search(self, li, key): 
+        if(not li): 
+            return False
+        # If key is present in  
+        # current node, return true 
+        if(li.data == key): 
+            return True        
+        # Recur for remaining list 
+        return self.search(li.next, key)            
+if __name__=='__main__': 
+  
+    li = LinkedList() 
+      
+    li.push(4) 
+    li.push(5) 
+    li.push(6) 
+    li.push(12) 
+      
+    key = 4
+      
+    if li.search(li.head,key): 
+        print("Yes") 
+    else: 
+        print("No") 
+        
+        
+ 
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled17.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+Yes       
