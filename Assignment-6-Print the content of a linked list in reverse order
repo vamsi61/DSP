@@ -1,0 +1,62 @@
+class Node: 
+
+    def __init__(self): 
+
+        self.data=  0
+
+        self.next=None
+
+def printReverse( head_ref, n): 
+    j = 0
+    current = head_ref 
+    while (current != None):  
+        i = 0
+        while ( i < 2 * (n - j) ): 
+            print(end=" ") 
+            i = i + 1
+
+        print( current.data, end = "\r") 
+
+        current = current.next
+
+        j = j + 1
+
+def push( head_ref, new_data): 
+
+    new_node = Node()  
+    new_node.data = new_data 
+    new_node.next = (head_ref) 
+    (head_ref) = new_node 
+    return head_ref; 
+
+def printList( head): 
+    i = 0
+    temp = head 
+    while (temp != None):  
+        print( temp.data,end = " ") 
+        temp = temp.next
+        i = i + 1
+
+    return i 
+
+head = None
+
+head = push(head, 8) 
+head = push(head, 7) 
+head = push(head, 4) 
+head = push(head, 9) 
+head = push(head, 2) 
+head = push(head, 5) 
+print("Given linked list:") 
+n = printList(head) 
+print("\nReversed Linked list:") 
+printReverse(head, n) 
+print() 
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled15.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+Given linked list:
+5 2 9 4 7 8 
+Reversed Linked list:
+  8 7 4 9 2 5
