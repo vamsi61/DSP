@@ -1,0 +1,66 @@
+class Node:  
+    def __init__(self,data):  
+        self.data = data;  
+        self.next = None;  
+
+class MinMax:   
+    def __init__(self):  
+        self.head = None;  
+        self.tail = None;  
+
+    def addNode(self, data):  
+        #Create a new node  
+        newNode = Node(data);  
+
+        if(self.head == None):    
+            self.head = newNode;  
+            self.tail = newNode;  
+        else:  
+            self.tail.next = newNode;   
+            self.tail = newNode;  
+
+    def minNode(self):  
+        current = self.head;  
+
+        if(self.head == None):  
+            print("List is empty");  
+        else:   
+            min = self.head.data;  
+
+            while(current != None):    
+                if(min > current.data):  
+                    min = current.data;  
+                current = current.next;  
+            print("Minimum value node in the list: " + str(min));  
+
+    def maxNode(self):  
+        current = self.head;  
+
+        if(self.head == None):  
+            print("List is empty");  
+        else:    
+            max = self.head.data;  
+
+            while(current != None):   
+                if(max < current.data):  
+                    max = current.data;  
+                current= current.next;  
+            print("Maximum value node in the list: " + str(max));  
+
+sList = MinMax();      
+
+sList.addNode(5);  
+sList.addNode(8);  
+sList.addNode(1);  
+sList.addNode(6);  
+
+sList.minNode();  
+
+sList.maxNode();  
+
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled15.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+Minimum value node in the list: 1
+Maximum value node in the list: 8
