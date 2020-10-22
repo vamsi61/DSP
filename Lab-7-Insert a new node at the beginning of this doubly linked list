@@ -1,0 +1,58 @@
+class Node:    
+    def __init__(self,data):    
+        self.data = data;    
+        self.previous = None;    
+        self.next = None;    
+            
+class InsertStart:    
+    #Represent the head and tail of the doubly linked list    
+    def __init__(self):    
+        self.head = None;    
+        self.tail = None;    
+    def addAtStart(self, data):    
+        #Create a new node    
+        newNode = Node(data);    
+        if(self.head == None):       
+            self.head = self.tail = newNode;        
+            self.head.previous = None;       
+            self.tail.next = None;     
+        else:        
+            self.head.previous = newNode;        
+            newNode.next = self.head;        
+            newNode.previous = None;        
+            self.head = newNode;    
+                   
+    def display(self):        
+        current = self.head;    
+        if(self.head == None):    
+            print("List is empty");    
+            return;    
+        print("Adding a node to the start of the list: ");    
+        while(current != None):        
+            print(current.data),    
+            current = current.next;                   
+        print();                
+dList = InsertStart();         
+#Adding 59 to the list    
+dList.addAtStart(59);    
+dList.display();
+#Adding 18 to the list       
+dList.addAtStart(18);    
+dList.display();    
+#Adding 69 to the list    
+dList.addAtStart(69);    
+dList.display();    
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled16.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+Adding a node to the start of the list: 
+59
+
+Adding a node to the start of the list: 
+18
+59
+
+Adding a node to the start of the list: 
+69
+18
+59
