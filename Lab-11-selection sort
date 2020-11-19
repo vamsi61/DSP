@@ -1,0 +1,20 @@
+def selection_sort(alist):
+    for i in range(0, len(alist) - 1):
+        smallest = i
+        for j in range(i + 1, len(alist)):
+            if alist[j] < alist[smallest]:
+                smallest = j
+        alist[i], alist[smallest] = alist[smallest], alist[i]
+ 
+ 
+alist = input('Enter the list of numbers: ').split()
+alist = [int(x) for x in alist]
+selection_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/selectionsort.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+
+Enter the list of numbers: 8 9 25 14 3
+Sorted list: [3, 8, 9, 14, 25]
