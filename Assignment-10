@@ -1,0 +1,28 @@
+s = input(“Enter the string: “)
+flag = 1
+count = 0
+stack = []
+for x in s:
+   if x == ‘(‘:
+       stack.append(x)
+   if x == ‘)’:
+       if stack == []:
+           flag = 0
+           break
+       t = stack.pop()
+       if t != ‘(‘:
+           flag = 0
+           break
+       else:
+           count = count+1            
+if flag == 1:
+   print(“Count: %d” %(count))
+else:
+   print(“-1”)
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled20.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+
+Enter the string:(())
+Count: 2
