@@ -1,0 +1,28 @@
+def insertionSortRecursive(arr,n): 
+    if n<=1: 
+        return
+      
+    insertionSortRecursive(arr,n-1) 
+    last = arr[n-1] 
+    j = n-2
+    while (j>=0 and arr[j]>last): 
+        arr[j+1] = arr[j] 
+        j = j-1
+    arr[j+1]=last 
+      
+def printArray(arr,n): 
+    for i in range(n): 
+        print (arr[i]),   
+arr = [56,92,14,2,8] 
+n = len(arr) 
+insertionSortRecursive(arr, n) 
+printArray(arr, n) 
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled15.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+2
+8
+14
+56
+92
