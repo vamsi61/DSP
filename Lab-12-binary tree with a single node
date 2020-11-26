@@ -1,0 +1,18 @@
+class Node:
+
+    def __init__(self, data):
+
+        self.left = None
+        self.right = None
+        self.data = data
+
+    def PrintTree(self):
+        print(self.data)
+
+root = Node(4)
+root.PrintTree()
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled15.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+4
