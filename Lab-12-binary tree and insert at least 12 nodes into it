@@ -1,0 +1,55 @@
+class Node: 
+    def __init__(self, key): 
+        self.left = None
+        self.right = None
+        self.val = key 
+  
+def insert(root, key): 
+    if root is None: 
+        return Node(key) 
+    else: 
+        if root.val == key: 
+            return root 
+        elif root.val < key: 
+            root.right = insert(root.right, key) 
+        else: 
+            root.left = insert(root.left, key) 
+    return root 
+    
+def inorder(root): 
+    if root: 
+        inorder(root.left) 
+        print(root.val) 
+        inorder(root.right) 
+  
+r = Node(58) 
+r = insert(r,12) 
+r = insert(r,91) 
+r = insert(r,48) 
+r = insert(r,14) 
+r = insert(r,29) 
+r = insert(r,64)
+r = insert(r,28)
+r = insert(r,52)
+r = insert(r,21)
+r = insert(r,18)
+r = insert(r,63) 
+inorder(r) 
+
+
+
+
+
+runfile('C:/Users/vamsi/OneDrive/Desktop/python/untitled16.py', wdir='C:/Users/vamsi/OneDrive/Desktop/python')
+12
+14
+18
+21
+28
+29
+48
+52
+58
+63
+64
+91
